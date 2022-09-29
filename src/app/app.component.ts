@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'teamapp';
+  newMember = "";
+  members:string[] = [];
+
+  onInput(member:string){
+    this.newMember = member;
+  }
+
+  addMember(){
+    this.members.push(this.newMember);
+  }
+
 }
+
