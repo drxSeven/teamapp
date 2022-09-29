@@ -3,10 +3,9 @@
       <div class="ui card">
         <h1>Team Gen</h1>
         <ul class="list">
-          <li>John Cena</li>
-          <li>The Miz</li>
-          <li>Seth Rolins</li>
+          <li *ngFor="let member of members">{{member}}</li>
         </ul>
+
           <div class="add-members-container">
             <input #addMemberInput type="text" placeholder="name" (input)="onInput(addMemberInput.value)">
             <button (click)="addMember()">Add</button>
